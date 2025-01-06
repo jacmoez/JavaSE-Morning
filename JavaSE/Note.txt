@@ -1,0 +1,70 @@
+Java 
+
+    hight level, OOP, 1995 James Gosling 
+    Desktop Application 
+    Web Application
+    Mobile
+    Embeddded System 
+    Smard Card 
+    Robotic
+    ML, AI, 
+    Games 
+
+    C, C++, Java, C#
+
+ Java Program Run 
+     1, Class File 
+     2, ClassLoader    
+     3, Bytecode Verifed 
+     4, Interpreter 
+     5, Runtime
+     6, Hardware
+
+Java Variable Type
+    1, Local Variable
+
+    2, Instance Variable
+
+    3, Static Variable
+
+Data Type 
+    
+    1, Primitive data Type
+        boolean, char, byte, short, int, long, float, double
+
+    2, Non-Primitive data Type
+       cout less, object, array, class, interface, 
+
+byte = 127, -128
+
+Int = 2147483647, -2147483648
+
+shorit = 32767, -32768
+
+long = 9223372036854775807, -9223372036854775808;
+
+float = 3.4028235E38, 1.4E-45
+
+double =  1.7976931348623157E308 , 4.9E-324
+
+Unicode System
+
+   ASCII , ISO 8859-1 Western EU Language, KOI-8 Russian, BIG-5 Chinese , UTF-8
+
+
+Java Operators
+     Unary Operator (expr++, expr--)
+
+     Arithmetic Operator (*, /, %, +, -)
+
+     Shift Operator     (<<, >>>)
+
+     Relational Operator (<, >, <=, >=, Instanceof, ==, !=)
+
+     Bitwise Operator  (&, ^, |)
+      
+     Logical Operator  (&&, ||)
+
+     Ternary Operator (? :)
+
+     Assignment Operator (=, +=, -=, *=, /=, %=, &=, ^=, |=, <<=, >>=, >>>=)
