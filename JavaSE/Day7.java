@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-public class Day8 {
+public class Day7 {
 
         public static void main(String[] args) {
             System.out.println("Hello Java");
         }
 
-        Day8(){
+        Day7(){
 
         }
         void show(){
