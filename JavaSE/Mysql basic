@@ -1,0 +1,120 @@
+// Connect to MySQL server as root user  
+mysql -u root -p
+//passwords to next
+
+
+// Show all databases  
+SHOW DATABASES;
+
+
+// Create a new database  
+CREATE DATABASE my_database;
+
+
+// Select a database to work with  
+USE my_database;
+
+
+// Delete a database 
+DROP DATABASE my_database;
+
+
+// Create users table with auto-increment ID, not null constraints, and default timestamp  
+CREATE TABLE IF NOT EXISTS users (
+        user_id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(35) NOT NULL,
+email VARCHAR(35) NOT NULL UNIQUE,
+password VARCHAR(35) NOT NULL,
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+// Create posts table with foreign key relationship to users  
+CREATE TABLE IF NOT EXISTS posts (
+        post_id INT AUTO_INCREMENT PRIMARY KEY,
+        sender_id INT NOT NULL,
+        content TEXT DEFAULT 'No content.',
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+// Show all tables in current database  
+SHOW TABLES;
+
+
+// View table structure  
+DESCRIBE users;
+
+
+// Delete a table   
+DROP TABLE IF EXISTS users;
+
+
+// Insert a single record into users table  
+INSERT INTO users (name, email, password) VALUES ('MgMg', 'mgmg@gmail.com', '@mgmg');
+
+
+// Insert multiple records in one command  
+INSERT INTO posts (sender_id, content) VALUES (2, 'Hello'), (3, 'Hi');
+
+
+// Insert with default value for content  
+INSERT INTO posts (sender_id) VALUES (1);
+
+
+// Update user information  
+UPDATE users SET name = 'MgZaw', email = 'mgzaw@gmail.com' WHERE user_id = 1;
+
+
+// Delete a user  
+DELETE FROM users WHERE user_id = 1;
+
+
+// Delete a post  
+DELETE FROM posts WHERE post_id = 2;
+
+
+// Select all columns for a specific user  
+SELECT * FROM users WHERE user_id = 1;
+
+
+// Select all posts with a join to get sender names  
+SELECT p.post_id, p.sender_id, u.name as sender_name
+FROM posts p
+LEFT JOIN users u ON p.sender_id = u.user_id
+WHERE p.created_at < '2025-06-15 14:45:00'
+ORDER BY p.created_at DESC
+LIMIT 15;
+
+
+// Search posts containing 'hi' (case insensitive)  
+SELECT * FROM posts WHERE content LIKE '%hi%' ORDER BY created_at DESC;
+
+
+// Count total posts  
+SELECT COUNT(*) total_post FROM posts;
+
+
+// Count posts per distinct user  
+SELECT COUNT(DISTINCT sender_id) per_user_post FROM posts;
+
+
+// Show current database  
+SELECT DATABASE();
+
+
+// Show current user  
+SELECT USER();
+
+
+// Show server version  
+SELECT VERSION();
+
+
+// Exit MySQL shell  
+EXIT;
+
+
+
+for exit or sucks
+\c  or cls or exit
