@@ -8,7 +8,7 @@ public class Login {
     static String adminPassword = "Admin123";
 
     //This method starts the Login
-    public static void beginLogin(){
+    public  void beginLogin(){
         boolean exitProgram = false;
 
         /** While the program has not exited this the loop will bring you back to the start options*/
@@ -49,9 +49,9 @@ public class Login {
 
                        /** Stop the loop */
                        loggedInAdmin = true;
-
+                       AdminMenu a = new AdminMenu();
                        /** Calls options from AdminMenu class - Opens the Admin Menu. */
-                       AdminMenu.options();
+                       a.options();
 
                        /** Exits from the starting login Loop */
                        exitProgram = true;}
