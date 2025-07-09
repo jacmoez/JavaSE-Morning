@@ -1,0 +1,13 @@
+File Exculude, Default Page 
+
+Spring MVC 
+
+@RequestMapping(Get, Post)
+
+@GetMapping (Get)
+
+@PostMapping (Post)
+
+https:// hosting.z.com /mm/ private-hosting/
+
+https:// hosting.z.com/ mm /private/
