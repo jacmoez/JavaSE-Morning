@@ -1,0 +1,74 @@
+Java SE 
+
+Java Web Development,
+
+Java Desktop Development,
+
+- Nodejs
+
+- PHP
+
+- Python (Django)
+
+- C# (ASP.Net), C++, Ruby, Go, Rust 
+
+- Java 
+
+Spring 
+
+Spring Boot 
+
+Java Android Development
+
+
+Spring Boots, Java EE 
+
+
+Spring Features 
+
+Core = Core Layer, IoC, dependency injection, Managing Objects
+
+Web = Handle Web Request, Process Requests, Pesponse HTML (or) XML (Or) SHML, JSON Data (API Data)
+
+Data = SQL, NoSQL, In-Memory Databasees;
+
+AOP (Aspect Oriented Programming)
+ 
+Test 
+
+Spring MVC
+
+Spring Security
+
+Spring ORM 
+
+Spring Test 
+
+Spring AOP 
+
+Spring Web Flow 
+
+Spring JDBC 
+
+
+
+Spring Core 
+
+ - Spring Boot Fundamental
+
+ - Smaple Project 
+
+ - static Web Page 
+
+ - Dynamic Web Page 
+
+ - Restful API Service 
+
+
+ - Spring Project
+
+ - RequestMapping & GetMapping
+
+ - Default Page & Dynamic Page 
+
+ 
