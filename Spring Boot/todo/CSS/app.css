@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: red;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(249, 249, 248);
+  font-size: 100%;
+}
+
+h2 {
+    color: #9000A1;
+   
+}
+
+p {
+    color: rgb(33, 39, 36);
+    font-family: serif;
+    line-height: 2;
+}
+
+/* .element {
+    color: #ff7f50;
+    text-shadow: -1px 0 rgb(104, 4, 4), 0 1px rgb(224, 31, 31), 1px 0 rgb(239, 238, 238), 0 -1px rgb(249, 244, 244);
+} */
+
+
+.element {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  color: white;
+}
+
+@keyframes mymove {
+    50% {
+        box-shadow: 10px 20px 30px blue;
+    }
+}

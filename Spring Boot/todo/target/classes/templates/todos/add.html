@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<div th:replace="~{includes/header :: head}"></div>
+
+<body>
+
+   <div th:replace="~{includes/navbar :: nav}"></div>
+
+    <div class="container">
+         <div class="col-md-6 offset-md-3">
+
+        <div class="d-flex justify-content-between">
+        <h3 class="mt-3 mb-3">Add New Todo</h3>
+        
+        <span class="mt-3 mb-3">
+            <a href="../todos" class="btn btn-sm btn-success">
+                <i class="fa fa-minus"></i>Back
+            </a>
+        </span>
+        </div>
+         
+
+    <div class="card">
+    <div class="card-body">
+    <form method="post" action="/todos/add">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Todo</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="todo Content">
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary btn-sm mb-3">Add</button>
+        </div>
+        </form>
+      
+</div>
+</div>
+    </div>   
+    <div th:replace="~{includes/footer :: footer}"></div>
+</body>
+
+</html>

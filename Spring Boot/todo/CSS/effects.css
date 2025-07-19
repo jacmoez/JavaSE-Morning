@@ -1,0 +1,27 @@
+.btn-1::before {
+    background-color: black;
+    transition: 1s;
+}
+
+.btn-1 span {
+    color: #d0cfcf;
+    border: 1px solid black;
+    transition: 1s;
+}
+
+.btn-1 span:hover {
+    color: black;
+    transition: 1s;
+}
+
+.btn-1.effect.two::before {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.btn-1.effect-one:hover::before {
+    height: 0%;
+}
