@@ -1,0 +1,32 @@
+
+
+Flutter         (Andriod, ios)
+
+React Native    (Android, ios)
+
+Kotlin          (Android, ios)
+
+Object C (ios)
+
+
+Dart 
+
+Choco install
+
+Dart zip file inatall 
+
+Flutter install 
+
+
+//Name Convention
+
+/**
+ * Upper Camel Case       [Class, Enum, Typedefs, Generic Type Parameters ]
+ * 
+ * Lower Camel Case       [Class members, top-level definitions, varaible, parameters]
+ * 
+ * Lowercase_With_undersore [libries, packages, directioes, file name]
+ */
+
+
+Dafault Values, Concatnation 
