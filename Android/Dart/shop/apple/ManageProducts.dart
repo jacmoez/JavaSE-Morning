@@ -26,6 +26,7 @@ class Manageproducts {
           break;
         case 2:
           print("Product Services Delete Product...");
+          Productserivices.deleteProduct();
           break;
         case 3:
           print("----------------------------");
