@@ -13,22 +13,19 @@ class Login {
     bool exiteProgram = false;
 
     while (!exiteProgram) {
-      List<String> startOptions = ['Login', 'Reister', 'Exit'];
-
       print("Welcome To Apple Store System");
       print("Select an Option:!");
+      print("[1] Admin");
+      print("[2] Customer");
+      print("[3] Exit");
 
-      for (int i = 0; i < startOptions.length; i++) {
-        print('[$i] ${startOptions[i]}');
-      }
-
-      stdout.write("Enter you choice (0-${startOptions.length - 1}:)  ");
+      stdout.write("Enter choice [1-3]: ");
 
       String? input = stdin.readLineSync();
       int? startChoice = int.tryParse(input!);
 
       switch (startChoice) {
-        case 0: //Admin Login
+        case 1: //Admin Login
           bool loggedInAdmin = false;
 
           while (!loggedInAdmin) {
@@ -44,7 +41,7 @@ class Login {
                 adminPasswordInput == adminPassword) {
               print("\nAccess Granted! Welcome, Admin ");
               loggedInAdmin = true;
-              
+
               Adminmenu.options();
 
               exiteProgram = true;
@@ -60,15 +57,31 @@ class Login {
           }
           break;
 
-        case 1: //Customer Menu
+        case 2: //Customer Menu
           print("\nCustomer Menu");
           print("[1] Login");
           print("[2] Sign Up");
           print("[3] Back");
+
+          stdout.write("Enter choice [1-3]: ");
+          int? customerChoice = int.tryParse(stdin.readLineSync()!);
+
+          if (customerChoice == 1) {
+            //Customer Login
+            bool loggedInCustomer = false;
+
+            while (!loggedInCustomer) {
+              stdout.write("Customer Username: ");
+              String? customerUsernameInput = stdin.readLineSync();
+              if (customerUsernameInput == null) break;
+
+              //bool customeFound = false;
+            }
+          }
           exiteProgram = true;
           break;
 
-        case 2:
+        case 3:
           print("Thank you for visiting the Apple Store!");
           exiteProgram = true;
           break;
