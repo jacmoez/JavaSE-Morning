@@ -58,12 +58,96 @@ class Productserivices {
   }
 
   //delete product
-  void deleteProduct() {
-    print("Delete Product Comming...");
+  static deleteProduct() {
+    stdout.write("\nEnter Product ID to delete: ");
+    int? idToDelete = int.tryParse(input.readLineSync()!);
+    if (idToDelete == null) {
+      print("Invalid ID input");
+      return;
+    }
+
+    bool found = false;
+    for (int i = 0; i < Product.productCount; i++) {
+      var product = Product.products[i];
+
+      if (product != null && product.getId == idToDelete) {
+        //Shift left to fill gap
+
+        for (int j = i; j < Product.productCount - 1; j++) {
+          Product.products[j] = Product.products[j + 1];
+        }
+
+        Product.products[Product.productCount - 1] == null;
+        Product.productCount--;
+        print("Procut with ID ${idToDelete} delete.");
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) {
+      print("Product not found");
+    }
   }
 
   //purchase products
   void purchaseProduct() {
     print("Purchase Products Comming...");
+    print("\n");
+
+    stdout.write("Here are out aviilable product: ");
+    viewProducts();
+
+    print("\n");
+
+    print("How many different product do you want to buy? ");
+    int? numberOfItems = int.tryParse(input.readLineSync()!);
+
+    if (numberOfItems == null || numberOfItems <= 0) {
+      print("Invalid number of items.");
+      return;
+    }
+
+    //double total = 0.0;
+
+    for (int i = 0; i < numberOfItems; i++) {
+      stdout.write("Enter Product ID: ");
+      int? productID = int.tryParse(input.readLineSync()!);
+      if (productID == null) {
+        print("Invalid Product ID.");
+        continue;
+      }
+
+      stdout.write("Enter Quantity: ");
+      int? quantity = int.tryParse(input.readLineSync()!);
+      if (quantity == null) {
+        print("Invalid Quantity.");
+        continue;
+      }
+
+      Product? selectProduct;
+
+      for (var product in Product.products) {
+        if (product != null && product.getId == productID) {
+          selectProduct = product;
+          break;
+        }
+      }
+
+      if (selectProduct == null) {
+        print("Product ID not found.");
+        continue;
+      }
+
+      if (selectProduct.getStock >= quantity) {
+        int newStock = selectProduct.getStock - quantity;
+        selectProduct.setStock(newStock);
+
+        double itemTotal = selectProduct.getPrice * quantity;
+        //total += itemTotal;
+
+        print("Purchased  ${selectProduct.getName} x ${quantity} ${selectProduct.getPrice.toStringAsFixed(2)} each = ${itemTotal.toStringAsFixed(2)}");
+      }
+    }
   }
 }
