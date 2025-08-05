@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'Product.dart';
 
-class Productserivices {
+class Productservices {
   static final input = stdin;
 
   //View products
@@ -91,7 +91,7 @@ class Productserivices {
   }
 
   //purchase products
-  void purchaseProduct() {
+  static void purchaseProduct() {
     print("Purchase Products Comming...");
     print("\n");
 
@@ -108,7 +108,7 @@ class Productserivices {
       return;
     }
 
-    //double total = 0.0;
+    double total = 0.0;
 
     for (int i = 0; i < numberOfItems; i++) {
       stdout.write("Enter Product ID: ");
@@ -144,10 +144,19 @@ class Productserivices {
         selectProduct.setStock(newStock);
 
         double itemTotal = selectProduct.getPrice * quantity;
-        //total += itemTotal;
+        total += itemTotal;
 
-        print("Purchased  ${selectProduct.getName} x ${quantity} ${selectProduct.getPrice.toStringAsFixed(2)} each = ${itemTotal.toStringAsFixed(2)}");
+        print(
+          "Purchased  ${selectProduct.getName} x ${quantity} ${selectProduct.getPrice.toStringAsFixed(2)} each = \$${itemTotal.toStringAsFixed(2)}",
+        );
+
+        //Pending Transaction
+      } else {
+        print("Not enough stock for ${selectProduct.getName}");
       }
+      print("\n");
     }
+
+    print("Total Amount Due: \$${total.toStringAsFixed(2)}");
   }
 }
