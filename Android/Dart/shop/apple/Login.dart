@@ -1,6 +1,7 @@
 import 'dart:io';
-
 import 'AdminMenu.dart';
+import 'Customer.dart';
+import 'CustomerMenu.dart';
 
 class Login {
   //The default Admin username & password
@@ -75,10 +76,101 @@ class Login {
               String? customerUsernameInput = stdin.readLineSync();
               if (customerUsernameInput == null) break;
 
-              //bool customeFound = false;
+              stdout.write("Customer Password: ");
+              String? customerPasswordInput = stdin.readLineSync();
+              if (customerPasswordInput == null) break;
+
+              bool customerFound = false;
+
+              for (int i = 0; i < Customer.customerCount; i++) {
+                var user = Customer.customers[i];
+                if (user != null &&
+                    user.getUsername == customerUsernameInput &&
+                    user.getPassword == customerPasswordInput) {
+                  customerFound = true;
+                  break;
+                }
+              }
+
+              if (customerFound) {
+                print(
+                  "Access Granted! Welcome, ${customerUsernameInput} \uD83c\uDF4E\n",
+                );
+                loggedInCustomer = true;
+                loggedInCustomerName = customerUsernameInput;
+
+                //Customer Calss Calss
+                CustomerMenu.options();
+
+                exiteProgram = true;
+              } else {
+                print(" Incorred credentails.");
+                print("[1] Try Again");
+                print("[2] Back to Start");
+
+                stdout.write("Choose: ");
+                String? choice = stdin.readLineSync();
+                if (choice == '2') break;
+              }
+            }
+          } else if (customerChoice == 2) {
+            // Customer Sign Up
+            if (Customer.customerCount >= Customer.customers.length) {
+              print(" Customer limit reached. Cannot register more.");
+              continue;
+            }
+
+            stdout.write("Enter email: ");
+            String? newEmail = stdin.readLineSync();
+            if (newEmail == null || newEmail.trim().isEmpty) {
+              print(" Pleases enter a valid email.");
+              continue;
+            }
+
+            stdout.write("Enter full name: ");
+            String? newName = stdin.readLineSync();
+            if (newName == null || newName.trim().isEmpty) {
+              print(" Please enter a valid name.");
+              continue;
+            }
+
+            stdout.write("Enter new username: ");
+            String? newUser = stdin.readLineSync();
+            if (newUser == null || newUser.trim().isEmpty) {
+              print(" Please enter a valid username.");
+              continue;
+            }
+
+            stdout.write("Enter new password: ");
+            String? newPass = stdin.readLineSync();
+            if (newPass == null || newPass.trim().isEmpty) {
+              print(" Please enter a valid password.");
+              continue;
+            }
+
+            //Check for duplicate username
+            bool customerExists = false;
+            for (int i = 0; i < Customer.customerCount; i++) {
+              var user = Customer.customers[i];
+              if (user != null && user.getUsername == newUser) {
+                customerExists = true;
+                break;
+              }
+            }
+            if (customerExists) {
+              print("Username already exists. Plase choose anthor.");
+            } else {
+              Customer.customers[Customer.customerCount] = Customer(
+                newName,
+                newEmail,
+                newUser,
+                newPass,
+              );
+              Customer.customerCount++;
+              print("Sign-Up successful! You Can now log in as ${newUser}");
             }
           }
-          exiteProgram = true;
+
           break;
 
         case 3:
