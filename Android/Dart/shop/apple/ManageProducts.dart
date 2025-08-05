@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'ProductSerivices.dart';
+import 'ProductServices.dart';
 
 class Manageproducts {
   void showPMemenu() {
@@ -22,17 +22,17 @@ class Manageproducts {
         case 1:
           print("Product Services Add Product...");
           print("\n");
-          Productserivices.addProduct();
+          Productservices.addProduct();
           break;
         case 2:
           print("Product Services Delete Product...");
-          Productserivices.deleteProduct();
+          Productservices.deleteProduct();
           break;
         case 3:
           print("----------------------------");
           print("|     Apple Inventory      |");
           print("----------------------------");
-          Productserivices.viewProducts();
+          Productservices.viewProducts();
           break;
         case 0:
           return;
