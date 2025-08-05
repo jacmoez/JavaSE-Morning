@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'Customer.dart';
 import 'Login.dart';
 import 'ManageProducts.dart';
 
@@ -38,6 +39,7 @@ class Adminmenu {
           print("----------------------------");
           print("Customer View Customer...");
           print("\n");
+          Customer.viewCustomers();
           break;
 
         case 3:
