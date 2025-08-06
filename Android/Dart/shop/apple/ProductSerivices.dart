@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'Product.dart';
+import 'Transition.dart';
 
 class Productservices {
   static final input = stdin;
@@ -92,7 +93,6 @@ class Productservices {
 
   //purchase products
   static void purchaseProduct() {
-    print("Purchase Products Comming...");
     print("\n");
 
     stdout.write("Here are out aviilable product: ");
@@ -109,6 +109,7 @@ class Productservices {
     }
 
     double total = 0.0;
+    List<Transition> pendingTransactions = [];
 
     for (int i = 0; i < numberOfItems; i++) {
       stdout.write("Enter Product ID: ");
@@ -151,6 +152,14 @@ class Productservices {
         );
 
         //Pending Transaction
+        pendingTransactions.add(
+          Transition(
+            'CustomerName',
+            selectProduct.getName,
+            quantity,
+            selectProduct.getPrice,
+          ),
+        );
       } else {
         print("Not enough stock for ${selectProduct.getName}");
       }
@@ -158,5 +167,68 @@ class Productservices {
     }
 
     print("Total Amount Due: \$${total.toStringAsFixed(2)}");
+
+    stdout.write("Enter payment method (cash/credit): ");
+    String? paymentType = input.readLineSync()?.toLowerCase();
+
+    if (paymentType == null) {
+      print("Invalid payment method");
+      return;
+    }
+
+    bool paymentSuccessful = false;
+
+    if (paymentType == "cash") {
+      stdout.write("Enter cash amount: \$");
+      double? payment = double.tryParse(input.readLineSync()!);
+
+      if (payment == null) {
+        print("Invalid payment method");
+        return;
+      }
+
+      if (payment >= total) {
+        double change = payment - total;
+        print("Payment successful. Change: \$${change.toStringAsFixed(2)}");
+      }
+    } else if (paymentType == 'credit') {
+      stdout.write('Credit card number: ');
+      int? cardNumber = int.tryParse(input.readLineSync()!);
+
+      stdout.write('Credit card holder: ');
+      String? cardHolder = input.readLineSync();
+
+      stdout.write('Expiration date (M/Y): ');
+      String? expirDate = input.readLineSync();
+
+      stdout.write("CCV: ");
+      int? ccv = int.tryParse(input.readLineSync()!);
+
+      if (cardNumber != null &&
+          cardHolder.toString().length >= 5 &&
+          cardHolder != null &&
+          cardHolder.isNotEmpty &&
+          expirDate != null &&
+          expirDate.isNotEmpty &&
+          ccv != null &&
+          ccv > 100 &&
+          ccv <= 999) {
+        print("Credit payment accepted.");
+        paymentSuccessful = true;
+      } else {
+        print("Invalid credit card details. Purchase cancelled.");
+      }
+    } else {
+      print("Unsupported payment method.");
+    }
+
+    if (paymentSuccessful) {
+      for (var i in pendingTransactions) {
+        i.save();
+      }
+      print("Purchase Complete. Thank You!");
+    } else {
+      print("Transaction faild. No purchase was saved.");
+    }
   }
 }
