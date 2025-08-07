@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'Login.dart';
 import 'ProductServices.dart';
+import 'Transition.dart';
 
 class CustomerMenu {
   //Method to show Customer Menu
@@ -49,7 +50,7 @@ class CustomerMenu {
           print("----------------------------");
           print("|      Transactions        |");
           print("----------------------------");
-          print(" Transcation View Customer Transactions Comming Soon...");
+          Transition.viewCustomerTransaction(Login.loggedInCustomerName);
           print("\n");
           break;
         case 0:
