@@ -3,6 +3,7 @@ import 'dart:io';
 import 'Customer.dart';
 import 'Login.dart';
 import 'ManageProducts.dart';
+import 'Transition.dart';
 
 class Adminmenu {
   static void showMenu() {
@@ -46,7 +47,7 @@ class Adminmenu {
           print("----------------------------");
           print("|       Transactions       |");
           print("----------------------------");
-          print("Transactions View All Transactions...");
+          Transition.viewAllTransactions();
           print("\n");
           break;
 
