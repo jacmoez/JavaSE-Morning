@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'Login.dart';
 import 'Product.dart';
 import 'Transition.dart';
 
@@ -154,7 +155,7 @@ class Productservices {
         //Pending Transaction
         pendingTransactions.add(
           Transition(
-            'CustomerName',
+            Login.loggedInCustomerName,
             selectProduct.getName,
             quantity,
             selectProduct.getPrice,
@@ -190,6 +191,12 @@ class Productservices {
       if (payment >= total) {
         double change = payment - total;
         print("Payment successful. Change: \$${change.toStringAsFixed(2)}");
+        paymentSuccessful = true;
+      } else {
+        double shortFall = total - payment;
+        print(
+          'Insufficient funds. You are short by: ${shortFall.toStringAsFixed(2)}',
+        );
       }
     } else if (paymentType == 'credit') {
       stdout.write('Credit card number: ');
