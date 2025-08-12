@@ -1,0 +1,290 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Mila",
+        "last": "Walker"
+      },
+      "location": {
+        "street": {
+          "number": 8251,
+          "name": "Main Street East"
+        },
+        "city": "Auckland",
+        "state": "Southland",
+        "country": "New Zealand",
+        "postcode": 67275,
+        "coordinates": {
+          "latitude": "51.1826",
+          "longitude": "123.4038"
+        },
+        "timezone": {
+          "offset": "+9:30",
+          "description": "Adelaide, Darwin"
+        }
+      },
+      "email": "mila.walker@example.com",
+      "login": {
+        "uuid": "ad4ed70a-a34d-41e1-8e0a-afb2559f0739",
+        "username": "redmouse951",
+        "password": "77777777",
+        "salt": "orYg4dF3",
+        "md5": "c6b1e9077824ea025c08f9f68d4aef35",
+        "sha1": "eabe7f95d1347b4d5ca8367cd466db9ec33132e4",
+        "sha256": "3c099d8a0b9a2aae5a636df2b55c01d0a8427d1ccad88c438f4d953b108350c7"
+      },
+      "dob": {
+        "date": "1984-11-03T21:16:17.908Z",
+        "age": 40
+      },
+      "registered": {
+        "date": "2005-06-22T18:46:37.676Z",
+        "age": 20
+      },
+      "phone": "(359)-042-6548",
+      "cell": "(449)-927-8870",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/30.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/30.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/30.jpg"
+      },
+      "nat": "NZ"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mrs",
+        "first": "Joy",
+        "last": "Harper"
+      },
+      "location": {
+        "street": {
+          "number": 490,
+          "name": "Depaul Dr"
+        },
+        "city": "Darwin",
+        "state": "New South Wales",
+        "country": "Australia",
+        "postcode": 1104,
+        "coordinates": {
+          "latitude": "15.5179",
+          "longitude": "-19.7696"
+        },
+        "timezone": {
+          "offset": "-9:00",
+          "description": "Alaska"
+        }
+      },
+      "email": "joy.harper@example.com",
+      "login": {
+        "uuid": "d77ff3bc-cc00-4d75-b102-52eabfa3e4fb",
+        "username": "heavyfish461",
+        "password": "player1",
+        "salt": "QS7Po4p0",
+        "md5": "3c102c10054b7e535b3fa1f8a59b8572",
+        "sha1": "6fb7052192920ccecc26082679298a27963bdeaf",
+        "sha256": "03b7ba41845ee40e9123fae6a90e536170698ae598e5b0d623a2af3fd83247cc"
+      },
+      "dob": {
+        "date": "1989-01-02T19:49:06.437Z",
+        "age": 36
+      },
+      "registered": {
+        "date": "2021-04-04T20:31:15.015Z",
+        "age": 4
+      },
+      "phone": "06-0830-8100",
+      "cell": "0457-901-724",
+      "id": {
+        "name": "TFN",
+        "value": "271149058"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/37.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/37.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/37.jpg"
+      },
+      "nat": "AU"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mademoiselle",
+        "first": "Dana",
+        "last": "Roger"
+      },
+      "location": {
+        "street": {
+          "number": 9267,
+          "name": "Rue Dumenge"
+        },
+        "city": "Mesocco",
+        "state": "Jura",
+        "country": "Switzerland",
+        "postcode": 1575,
+        "coordinates": {
+          "latitude": "-10.9120",
+          "longitude": "-78.3810"
+        },
+        "timezone": {
+          "offset": "-8:00",
+          "description": "Pacific Time (US & Canada)"
+        }
+      },
+      "email": "dana.roger@example.com",
+      "login": {
+        "uuid": "6cf6a1e6-1c21-408b-b02c-374c127f19c1",
+        "username": "bigfish843",
+        "password": "12345",
+        "salt": "MdeIeoON",
+        "md5": "8ad66203283c2c48a6723027c1ed1219",
+        "sha1": "4c026cf8b24507c8adc96edc3045e886b0443c69",
+        "sha256": "7ef1c785045269e46593b8444a197bbf64520c92be974f82e45c1f37926f08c4"
+      },
+      "dob": {
+        "date": "1969-07-12T18:55:01.605Z",
+        "age": 56
+      },
+      "registered": {
+        "date": "2004-04-07T00:39:36.852Z",
+        "age": 21
+      },
+      "phone": "079 865 38 62",
+      "cell": "077 811 92 41",
+      "id": {
+        "name": "AVS",
+        "value": "756.2108.1841.91"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/27.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/27.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/27.jpg"
+      },
+      "nat": "CH"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Rómulo",
+        "last": "Moreira"
+      },
+      "location": {
+        "street": {
+          "number": 8500,
+          "name": "Rua Treze de Maio "
+        },
+        "city": "Uberlândia",
+        "state": "Pernambuco",
+        "country": "Brazil",
+        "postcode": 70199,
+        "coordinates": {
+          "latitude": "-63.6465",
+          "longitude": "102.9084"
+        },
+        "timezone": {
+          "offset": "-10:00",
+          "description": "Hawaii"
+        }
+      },
+      "email": "romulo.moreira@example.com",
+      "login": {
+        "uuid": "3e22ed86-4901-4813-aa01-4d71461dd995",
+        "username": "beautifulfrog880",
+        "password": "pepsi1",
+        "salt": "r0SfD8ji",
+        "md5": "2aae294e208c36e89b74c588a6768026",
+        "sha1": "02b2fcb1cfe38127ee792dd40759875d7e1aab78",
+        "sha256": "ba11bcd68c9ebf736c3da1803c5388f4f6b5406d49429ac48124dcdfaf524157"
+      },
+      "dob": {
+        "date": "1986-12-26T16:00:54.384Z",
+        "age": 38
+      },
+      "registered": {
+        "date": "2014-08-19T00:57:29.108Z",
+        "age": 10
+      },
+      "phone": "(64) 3487-9471",
+      "cell": "(78) 9621-5681",
+      "id": {
+        "name": "CPF",
+        "value": "085.110.447-32"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/29.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/29.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/29.jpg"
+      },
+      "nat": "BR"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Zev",
+        "last": "Landkroon"
+      },
+      "location": {
+        "street": {
+          "number": 6709,
+          "name": "Dwarsfluitstraat"
+        },
+        "city": "Oosterleek",
+        "state": "Gelderland",
+        "country": "Netherlands",
+        "postcode": "2727 EE",
+        "coordinates": {
+          "latitude": "57.0321",
+          "longitude": "50.8921"
+        },
+        "timezone": {
+          "offset": "-11:00",
+          "description": "Midway Island, Samoa"
+        }
+      },
+      "email": "zev.landkroon@example.com",
+      "login": {
+        "uuid": "49e22f37-2420-4d1d-b2e2-12da1ddf9a4f",
+        "username": "greenostrich742",
+        "password": "houston1",
+        "salt": "Bv22dxnc",
+        "md5": "ace1dac215c7110f133fa45024975663",
+        "sha1": "681960fbe7eb3b2a549aafdaa0b67534729e3956",
+        "sha256": "e8a4d5701351ba5189141470e24090605c317e45582890ad19748f44bcc7cc38"
+      },
+      "dob": {
+        "date": "1976-06-13T13:57:28.661Z",
+        "age": 49
+      },
+      "registered": {
+        "date": "2021-06-24T13:37:00.788Z",
+        "age": 4
+      },
+      "phone": "(006) 2522601",
+      "cell": "(06) 38416648",
+      "id": {
+        "name": "BSN",
+        "value": "59906517"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/34.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/34.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/34.jpg"
+      },
+      "nat": "NL"
+    }
+  ],
+  "info": {
+    "seed": "cfc29da3851b8b67",
+    "results": 5,
+    "page": 1,
+    "version": "1.4"
+  }
+}
