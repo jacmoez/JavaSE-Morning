@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
 
-///  void main() Widget
-///  stateless widget
-///
-///  Material App
-///
-///  stateful widget
-///
-///  Scaffold Widget
-
 void main(){
   runApp(Appli());
 }
@@ -36,25 +27,25 @@ class _FlashState extends State<Flash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.black12,
+      backgroundColor: Colors.grey,
       body: SafeArea(child:
       Column(
         children: [
-          Text("Android Developer", style: TextStyle(
-            color: Colors.black,
-            fontSize: 20
+          Text("Android Dev", style: TextStyle(
+            color: Colors.white,
+            fontSize: 30
           ),),
-        ElevatedButton(
-            onPressed: (){},
-            style: ElevatedButton.styleFrom(
-              // backgroundColor: Colors.pinkAccent,
-              // foregroundColor: Colors.white
-            ),
-            child: Text("Button One")),
+          ElevatedButton(onPressed: (){},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.pinkAccent,
+                foregroundColor: Colors.white,
+                textStyle: TextStyle(fontStyle: FontStyle.italic, fontSize: 30)
+              ),
+              child: Text("Button One")),
           ElevatedButton(onPressed: (){}, child: Text("Button Two"))
         ],
       ),
-    )
+    ),
     );
   }
 }
